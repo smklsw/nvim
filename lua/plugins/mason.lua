@@ -7,6 +7,8 @@ return {
     { 'folke/neodev.nvim', config = function() require('neodev').setup() end },
   },
   config = function()
+    local builtin = require('telescope.builtin')
+
     local map = function(mode, left, right, desc)
       local options = { silent = true, noremap = true, desc = desc }
 
@@ -56,6 +58,10 @@ return {
       map('n', '<Leader>sw', builtin.lsp_dynamic_workspace_symbols, '[W]orkspace')
       map('n', '<Leader>sh', vim.lsp.buf.hover, '[H]over')
     end
+
+    local capabilities = require('cmp_nvim_lsp').default_capabilities(
+      vim.lsp.protocol.make_client_capabilities()
+    )
 
     require('mason-lspconfig').setup_handlers({
       function(server)

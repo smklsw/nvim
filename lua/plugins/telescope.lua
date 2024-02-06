@@ -37,7 +37,6 @@ return {
 
     map('n', '?', builtin.help_tags, '[H]elp')
     map('n', '<Leader>sf', builtin.live_grep, '[F]ind')
-    map('n', '<Leader>df', builtin.diagnostics, '[F]ind')
     map('n', '<Leader>bf', builtin.buffers, '[F]ind')
 
     require('telescope').setup(telescope_options)

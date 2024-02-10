@@ -47,6 +47,7 @@ return {
       texlab = {},
       tsserver = {},
       yamlls = {},
+      terraformls = {},
     }
 
     local on_attach = function(_, buffer)

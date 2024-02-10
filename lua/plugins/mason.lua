@@ -47,7 +47,7 @@ return {
       texlab = {},
       tsserver = {},
       yamlls = {},
-      terraformls = {},
+      terraformls = { filetypes = { 'tf' } },
     }
 
     local on_attach = function(_, buffer)

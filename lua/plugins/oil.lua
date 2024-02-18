@@ -16,6 +16,9 @@ return {
         'size',
       },
       delete_to_trash = true,
+      view_options = {
+        show_hidden = true,
+      },
     }
 
     map('n', '<Leader>fb', '<Cmd>Oil<CR>', '[B]rowse')
